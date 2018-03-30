@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_3" version="4.3" x-baseVersion="4.3">
+    <Header>
+        <Application name="JPMML-SparkML-Package" version="1.2-SNAPSHOT"/>
+        <Timestamp>2018-03-09T01:39:09Z</Timestamp>
+    </Header>
+    <DataDictionary>
+        <DataField name="num_string" optype="continuous" dataType="double" isCyclic="0"/>
+        <DataField name="missing10" optype="continuous" dataType="double" isCyclic="0"/>
+        <DataField name="nomeaning_str" optype="categorical" dataType="string" isCyclic="0"/>
+        <DataField name="targetnum" optype="continuous" dataType="double" isCyclic="0"/>
+        <DataField name="allstr" optype="categorical" dataType="string" isCyclic="0"/>
+        <DataField name="str_num" optype="categorical" dataType="string" isCyclic="0"/>
+        <DataField name="nomeaning_num" optype="continuous" dataType="double" isCyclic="0"/>
+        <DataField name="targetstr" optype="categorical" dataType="string" isCyclic="0">
+            <Value value="T"/>
+            <Value value="F"/>
+        </DataField>
+    </DataDictionary>
+    <TransformationDictionary>
+        <DerivedField name="nomeaning_str_m0" optype="continuous" dataType="integer">
+            <MapValues outputColumn="output">
+                <FieldColumnPair field="nomeaning_str" column="input"/>
+                <InlineTable>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">T</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">1</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">F</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">0</output>
+                    </row>
+                </InlineTable>
+            </MapValues>
+        </DerivedField>
+        <DerivedField name="allstr_m0" optype="continuous" dataType="integer">
+            <MapValues outputColumn="output">
+                <FieldColumnPair field="allstr" column="input"/>
+                <InlineTable>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">a</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">0</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">b</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">1</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">c</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">2</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">d</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">3</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">e</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">4</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">f</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">5</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">g</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">6</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">h</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">7</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">i</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">8</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">j</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">9</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">k</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">10</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">l</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">11</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">m</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">12</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">n</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">13</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">o</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">14</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">p</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">15</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">q</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">16</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">r</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">17</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">s</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">18</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">t</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">19</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">u</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">20</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">v</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">21</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">w</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">22</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">x</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">23</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">y</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">24</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">z</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">25</output>
+                    </row>
+                </InlineTable>
+            </MapValues>
+        </DerivedField>
+        <DerivedField name="str_num_m0" optype="continuous" dataType="integer">
+            <MapValues outputColumn="output">
+                <FieldColumnPair field="str_num" column="input"/>
+                <InlineTable>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">e</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">10</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">i</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">11</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">o</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">12</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">0</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">0</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">p</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">13</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">1</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">1</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">q</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">14</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">2</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">2</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">r</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">15</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">3</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">3</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">4</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">4</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">t</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">16</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">5</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">5</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">u</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">17</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">6</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">6</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">7</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">7</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">w</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">18</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">8</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">8</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">9</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">9</output>
+                    </row>
+                    <row>
+                        <input xmlns:ns2="http://www.dmg.org/PMML-4_3">y</input>
+                        <output xmlns:ns2="http://www.dmg.org/PMML-4_3">19</output>
+                    </row>
+                </InlineTable>
+            </MapValues>
+        </DerivedField>
+    </TransformationDictionary>
+    <MiningModel functionName="classification">
+        <MiningSchema>
+            <MiningField name="targetstr" usageType="target"/>
+            <MiningField name="nomeaning_num" usageType="active" missingValueReplacement="1.0" x-invalidValueReplacement="1.0"/>
+            <MiningField name="num_string" usageType="active" missingValueReplacement="4978.5" x-invalidValueReplacement="4978.5"/>
+            <MiningField name="targetnum" usageType="active" missingValueReplacement="0.5" x-invalidValueReplacement="0.5"/>
+            <MiningField name="missing10" usageType="active" missingValueReplacement="0.0" x-invalidValueReplacement="0.0"/>
+            <MiningField name="nomeaning_str" usageType="active" missingValueReplacement="This is None" x-invalidValueReplacement="This is None"/>
+            <MiningField name="str_num" usageType="active" missingValueReplacement="This is None" x-invalidValueReplacement="This is None"/>
+            <MiningField name="allstr" usageType="active" missingValueReplacement="This is None" x-invalidValueReplacement="This is None"/>
+        </MiningSchema>
+        <Output>
+            <OutputField name="pmml(prediction)" optype="categorical" dataType="string" feature="predictedValue"/>
+            <OutputField name="prediction" optype="categorical" dataType="double" feature="transformedValue">
+                <MapValues outputColumn="output">
+                    <FieldColumnPair field="pmml(prediction)" column="input"/>
+                    <InlineTable>
+                        <row>
+							<input xmlns:ns2="http://www.dmg.org/PMML-4_3">T</input>
+							<output xmlns:ns2="http://www.dmg.org/PMML-4_3">0</output>
+						</row>
+                        <row>
+							<input xmlns:ns2="http://www.dmg.org/PMML-4_3">F</input>
+							<output xmlns:ns2="http://www.dmg.org/PMML-4_3">1</output>
+						</row>
+                    </InlineTable>
+                </MapValues>
+            </OutputField>
+            <OutputField name="probability(T)" optype="continuous" dataType="double" feature="probability" value="T"/>
+            <OutputField name="probability(F)" optype="continuous" dataType="double" feature="probability" value="F"/>
+        </Output>
+        <Segmentation multipleModelMethod="average">
+            <Segment id="1">
+                <True/>
+                <TreeModel functionName="classification" splitCharacteristic="binarySplit">
+                    <MiningSchema>
+                        <MiningField name="nomeaning_num"/>
+                        <MiningField name="missing10"/>
+                        <MiningField name="str_num"/>
+                    </MiningSchema>
+                    <Node score="T" recordCount="5071.0">
+                        <True/>
+                        <ScoreDistribution value="T" recordCount="2575.0"/>
+                        <ScoreDistribution value="F" recordCount="2496.0"/>
+                        <Node score="T" recordCount="527.0">
+                            <SimplePredicate field="str_num_m0" operator="lessOrEqual" value="1"/>
+                            <ScoreDistribution value="T" recordCount="299.0"/>
+                            <ScoreDistribution value="F" recordCount="228.0"/>
+                            <Node score="F" recordCount="54.0">
+<SimplePredicate field="nomeaning_num" operator="lessOrEqual" value="0"/>
+<ScoreDistribution value="F" recordCount="54.0"/>
+                            </Node>
+                            <Node score="T" recordCount="473.0">
+<SimplePredicate field="nomeaning_num" operator="greaterThan" value="0"/>
+<ScoreDistribution value="T" recordCount="299.0"/>
+<ScoreDistribution value="F" recordCount="174.0"/>
+                            </Node>
+                        </Node>
+                        <Node score="T" recordCount="4544.0">
+                            <SimplePredicate field="str_num_m0" operator="greaterThan" value="1"/>
+                            <ScoreDistribution value="T" recordCount="2276.0"/>
+                            <ScoreDistribution value="F" recordCount="2268.0"/>
+                            <Node score="F" recordCount="2718.0">
+<SimplePredicate field="missing10" operator="lessOrEqual" value="0"/>
+<ScoreDistribution value="T" recordCount="450.0"/>
+<ScoreDistribution value="F" recordCount="2268.0"/>
+                            </Node>
+                            <Node score="T" recordCount="1826.0">
+<SimplePredicate field="missing10" operator="greaterThan" value="0"/>
+<ScoreDistribution value="T" recordCount="1826.0"/>
+                            </Node>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="2">
+                <True/>
+                <TreeModel functionName="classification" splitCharacteristic="binarySplit">
+                    <MiningSchema>
+                        <MiningField name="missing10"/>
+                        <MiningField name="targetnum"/>
+                    </MiningSchema>
+                    <Node score="T" recordCount="5119.0">
+                        <True/>
+                        <ScoreDistribution value="T" recordCount="2578.0"/>
+                        <ScoreDistribution value="F" recordCount="2541.0"/>
+                        <Node score="F" recordCount="3036.0">
+                            <SimplePredicate field="missing10" operator="lessOrEqual" value="0"/>
+                            <ScoreDistribution value="T" recordCount="495.0"/>
+                            <ScoreDistribution value="F" recordCount="2541.0"/>
+                            <Node score="F" recordCount="2541.0">
+<SimplePredicate field="targetnum" operator="lessOrEqual" value="0"/>
+<ScoreDistribution value="F" recordCount="2541.0"/>
+                            </Node>
+                            <Node score="T" recordCount="495.0">
+<SimplePredicate field="targetnum" operator="greaterThan" value="0"/>
+<ScoreDistribution value="T" recordCount="495.0"/>
+                            </Node>
+                        </Node>
+                        <Node score="T" recordCount="2083.0">
+                            <SimplePredicate field="missing10" operator="greaterThan" value="0"/>
+                            <ScoreDistribution value="T" recordCount="2083.0"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="3">
+                <True/>
+                <TreeModel functionName="classification" splitCharacteristic="binarySplit">
+                    <MiningSchema>
+                        <MiningField name="num_string"/>
+                        <MiningField name="nomeaning_str"/>
+                    </MiningSchema>
+                    <Node score="T" recordCount="5038.0">
+                        <True/>
+                        <ScoreDistribution value="T" recordCount="2548.0"/>
+                        <ScoreDistribution value="F" recordCount="2490.0"/>
+                        <Node score="F" recordCount="511.0">
+                            <SimplePredicate field="nomeaning_str_m0" operator="lessOrEqual" value="0"/>
+                            <ScoreDistribution value="F" recordCount="511.0"/>
+                        </Node>
+                        <Node score="T" recordCount="4527.0">
+                            <SimplePredicate field="nomeaning_str_m0" operator="greaterThan" value="0"/>
+                            <ScoreDistribution value="T" recordCount="2548.0"/>
+                            <ScoreDistribution value="F" recordCount="1979.0"/>
+                            <Node score="T" recordCount="2443.0">
+<SimplePredicate field="num_string" operator="lessOrEqual" value="5506"/>
+<ScoreDistribution value="T" recordCount="1348.0"/>
+<ScoreDistribution value="F" recordCount="1095.0"/>
+                            </Node>
+                            <Node score="T" recordCount="2084.0">
+<SimplePredicate field="num_string" operator="greaterThan" value="5506"/>
+<ScoreDistribution value="T" recordCount="1200.0"/>
+<ScoreDistribution value="F" recordCount="884.0"/>
+                            </Node>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="4">
+                <True/>
+                <TreeModel functionName="classification" splitCharacteristic="binarySplit">
+                    <MiningSchema>
+                        <MiningField name="nomeaning_num"/>
+                        <MiningField name="missing10"/>
+                    </MiningSchema>
+                    <Node score="T" recordCount="5160.0">
+                        <True/>
+                        <ScoreDistribution value="T" recordCount="2623.0"/>
+                        <ScoreDistribution value="F" recordCount="2537.0"/>
+                        <Node score="F" recordCount="3081.0">
+                            <SimplePredicate field="missing10" operator="lessOrEqual" value="0"/>
+                            <ScoreDistribution value="T" recordCount="544.0"/>
+                            <ScoreDistribution value="F" recordCount="2537.0"/>
+                            <Node score="F" recordCount="499.0">
+<SimplePredicate field="nomeaning_num" operator="lessOrEqual" value="0"/>
+<ScoreDistribution value="F" recordCount="499.0"/>
+                            </Node>
+                            <Node score="F" recordCount="2582.0">
+<SimplePredicate field="nomeaning_num" operator="greaterThan" value="0"/>
+<ScoreDistribution value="T" recordCount="544.0"/>
+<ScoreDistribution value="F" recordCount="2038.0"/>
+                            </Node>
+                        </Node>
+                        <Node score="T" recordCount="2079.0">
+                            <SimplePredicate field="missing10" operator="greaterThan" value="0"/>
+                            <ScoreDistribution value="T" recordCount="2079.0"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="5">
+                <True/>
+                <TreeModel functionName="classification" splitCharacteristic="binarySplit">
+                    <MiningSchema>
+                        <MiningField name="nomeaning_str"/>
+                        <MiningField name="allstr"/>
+                    </MiningSchema>
+                    <Node score="F" recordCount="4832.0">
+                        <True/>
+                        <ScoreDistribution value="T" recordCount="2395.0"/>
+                        <ScoreDistribution value="F" recordCount="2437.0"/>
+                        <Node score="F" recordCount="492.0">
+                            <SimplePredicate field="nomeaning_str_m0" operator="lessOrEqual" value="0"/>
+                            <ScoreDistribution value="F" recordCount="492.0"/>
+                        </Node>
+                        <Node score="T" recordCount="4340.0">
+                            <SimplePredicate field="nomeaning_str_m0" operator="greaterThan" value="0"/>
+                            <ScoreDistribution value="T" recordCount="2395.0"/>
+                            <ScoreDistribution value="F" recordCount="1945.0"/>
+                            <Node score="T" recordCount="1192.0">
+<SimplePredicate field="allstr_m0" operator="lessOrEqual" value="6"/>
+<ScoreDistribution value="T" recordCount="614.0"/>
+<ScoreDistribution value="F" recordCount="578.0"/>
+                            </Node>
+                            <Node score="T" recordCount="3148.0">
+<SimplePredicate field="allstr_m0" operator="greaterThan" value="6"/>
+<ScoreDistribution value="T" recordCount="1781.0"/>
+<ScoreDistribution value="F" recordCount="1367.0"/>
+                            </Node>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+        </Segmentation>
+    </MiningModel>
+</PMML>
